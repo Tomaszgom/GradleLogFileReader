@@ -1,0 +1,32 @@
+2019-03-18 21:51:47,552 [main] INFO  (AppMain.java:41) - Launching application.
+ 2019-03-18 21:51:47,721 [JavaFX Application Thread] INFO  (AppMain.java:49) - Loading GUI.
+ 2019-03-18 21:51:54,494 [JavaFX Application Thread] INFO  (AppMain.java:131) - Application closed.
+ 2019-03-18 21:53:00,292 [main] INFO  (AppMain.java:41) - Launching application.
+ 2019-03-18 21:53:00,410 [JavaFX Application Thread] INFO  (AppMain.java:49) - Loading GUI.
+ 2019-03-18 21:53:07,892 [JavaFX Application Thread] INFO  (AppMain.java:131) - Application closed.
+ 2019-03-18 22:02:54,874 [main] INFO  (AppMain.java:44) - Launching application.
+ 2019-03-18 22:02:55,000 [JavaFX Application Thread] INFO  (AppMain.java:52) - Loading GUI.
+ 2019-03-18 22:03:16,595 [JavaFX Application Thread] INFO  (AppMain.java:134) - Application closed.
+ 2019-03-18 22:22:37,765 [Time-limited test] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 22:22:37,805 [Time-limited test] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 22:22:38,664 [Time-limited test] INFO  (?:?) - checkpointClose start
+ 2019-03-18 22:22:38,666 [Time-limited test] INFO  (?:?) - checkpointClose synched
+ 2019-03-18 22:22:38,703 [Time-limited test] INFO  (?:?) - checkpointClose script done
+ 2019-03-18 22:22:38,777 [Time-limited test] INFO  (?:?) - checkpointClose end
+ 2019-03-18 22:22:38,868 [main] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 22:22:38,870 [main] INFO  (DbConnection.java:57) - Attempting to connect to database and execute query.
+ 2019-03-18 22:22:38,898 [main] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 23:00:30,948 [Time-limited test] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 23:00:31,010 [Time-limited test] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 23:00:32,982 [Time-limited test] INFO  (?:?) - checkpointClose start
+ 2019-03-18 23:00:32,983 [Time-limited test] INFO  (?:?) - checkpointClose synched
+ 2019-03-18 23:00:33,044 [Time-limited test] INFO  (?:?) - checkpointClose script done
+ 2019-03-18 23:00:33,157 [Time-limited test] INFO  (?:?) - checkpointClose end
+ 2019-03-18 23:00:33,269 [Test worker] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 23:00:33,270 [Test worker] INFO  (DbConnection.java:57) - Attempting to connect to database and execute query.
+ 2019-03-18 23:00:33,329 [Test worker] INFO  (DbConnection.java:22) - Attempting to load HSQLDB JDBC driver.
+ 2019-03-18 23:00:34,186 [Test worker] INFO  (LogFileRead.java:36) - Attempting to open the file.
+ 2019-03-18 23:01:38,222 [main] INFO  (AppMain.java:42) - Launching application.
+ 2019-03-18 23:01:38,391 [JavaFX Application Thread] INFO  (AppMain.java:50) - Loading GUI.
+ 2019-03-18 23:01:47,780 [JavaFX Application Thread] INFO  (AppMain.java:132) - Application closed.
+ 

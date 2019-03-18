@@ -1,0 +1,12 @@
+2019-03-18 19:55:41 INFO  AppMain:41 - Launching application.
+2019-03-18 19:55:41 INFO  AppMain:49 - Loading GUI.
+2019-03-18 19:55:45 INFO  AppMain:140 - Application closed.
+2019-03-18 19:57:22 INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 19:57:22 INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 19:57:22 INFO  DbConnection:61 - Attempting to connect to database and execute query.
+2019-03-18 19:57:23 INFO  ENGINE:? - checkpointClose start
+2019-03-18 19:57:23 INFO  ENGINE:? - checkpointClose synched
+2019-03-18 19:57:23 INFO  ENGINE:? - checkpointClose script done
+2019-03-18 19:57:23 INFO  ENGINE:? - checkpointClose end
+2019-03-18 19:57:23 INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 19:57:24 INFO  LogFileRead:36 - Attempting to open the file.

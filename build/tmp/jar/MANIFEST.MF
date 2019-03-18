@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: Application built with jar file
+Implementation-Version: 1.0-SNAPSHOT
+Created-By: Tomasz Gomoradzki
+Main-Class: com.logreader.AppMain
+
