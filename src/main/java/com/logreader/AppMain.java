@@ -159,7 +159,7 @@ public final class AppMain extends Application {
     
     // Load Application properties   
     public static void LoadAppProperties(){
-    	try(InputStream inputProperties = new FileInputStream("./application.properties")){   
+    	try(InputStream inputProperties = new FileInputStream("./src/main/resources/application.properties")){   
     		properties.load(inputProperties);  		
     	}catch (IOException e) {
     		logger.debug("Application properties could not be loaded.",e);

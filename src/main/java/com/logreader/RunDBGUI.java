@@ -24,7 +24,7 @@ public class RunDBGUI {
 	/* Load Application properties */   	
 
     public static void LoadAppProperties(){  	
-    	try(InputStream inputProperties = new FileInputStream("./application.properties")){   
+    	try(InputStream inputProperties = new FileInputStream("./src/main/resources/application.properties")){   
     		properties.load(inputProperties);  		
     	}catch (IOException e) {
     		e.printStackTrace();
