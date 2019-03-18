@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.logreader.AppMainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-03-18T22:00:30" hostname="HP-ROKHVUNS84EC" time="0.518">
+  <properties/>
+  <testcase name="testLoadAppProperties_PropertyAvailable" classname="com.logreader.AppMainTest" time="0.518"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

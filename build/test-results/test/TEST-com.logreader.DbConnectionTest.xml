@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.logreader.DbConnectionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-03-18T22:00:30" hostname="HP-ROKHVUNS84EC" time="2.427">
+  <properties/>
+  <testcase name="testLoadJDBCDriver" classname="com.logreader.DbConnectionTest" time="2.333"/>
+  <testcase name="testInsertData" classname="com.logreader.DbConnectionTest" time="0.092"/>
+  <system-out><![CDATA[2019-03-18 23:00:30 [Time-limited test] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 23:00:31 [Time-limited test] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 23:00:32 [Time-limited test] INFO  ENGINE:? - checkpointClose start
+2019-03-18 23:00:32 [Time-limited test] INFO  ENGINE:? - checkpointClose synched
+2019-03-18 23:00:33 [Time-limited test] INFO  ENGINE:? - checkpointClose script done
+2019-03-18 23:00:33 [Time-limited test] INFO  ENGINE:? - checkpointClose end
+2019-03-18 23:00:33 [Test worker] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+2019-03-18 23:00:33 [Test worker] INFO  DbConnection:57 - Attempting to connect to database and execute query.
+2019-03-18 23:00:33 [Test worker] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
