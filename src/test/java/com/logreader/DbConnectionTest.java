@@ -18,6 +18,7 @@ public class DbConnectionTest {
 	static DbConnection dbConnection = new DbConnection();
 	static Connection conn;
 	static String testRecId = "testId0001";
+	static ClassLoader classLoader;
 	
 	static HashMap<String, Event> testEventsMap = new HashMap<String, Event>();  	
 	static Event event = new Event();
@@ -31,8 +32,7 @@ public class DbConnectionTest {
 		
 	@BeforeClass
 	public static void CreateExpectedEventsMap() {
-		dbConnection.CreateEventTable(new File("/.src/test/resources/sql/createEventTable.sql"));
-		
+
 		eetrySt.setId(testRecId);
 		eetryFsh.setId(testRecId);
 		event.setId(testRecId);
@@ -65,9 +65,10 @@ public class DbConnectionTest {
 		
 		/* Method reads test record from event table to check side effects
  		 * Test DB instance for testing purposes has not been created/used to keep the project simple 
-		 */
-		
+		 */		
 		dbConnection.LoadJDBCDriver();						
+        dbConnection.CreateEventTable();
+		
 		try {		
 			conn = DriverManager.getConnection(AppMain.properties.getProperty("dbConnectionString"), "SA", "");
     		    		

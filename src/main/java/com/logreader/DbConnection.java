@@ -1,7 +1,5 @@
 package com.logreader;
 
-import java.io.File;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -9,7 +7,6 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
 public class DbConnection {
@@ -26,16 +23,18 @@ public class DbConnection {
 		}		
 	}
 	
-	public void CreateEventTable(File sqlFileCreateTable) {
+	public void CreateEventTable() {
 		
 		LoadJDBCDriver();
 				
-		// Load query from file			    
-		String createTable = fileToString(sqlFileCreateTable);
+		// Load query			    
+		String createTable = "create table if not exists Event"
+							+ "(id varchar(50), duration numeric, Type varchar(100), Host varchar(50), alert boolean);";
+		
 	   			
 		// Create DB and table if does not exist		
 		try {	
-			logger.info("Attempting to connect to database and execute query.");
+			logger.info("Attempting to connect to database and execute create table query.");
 			conn = DriverManager.getConnection(AppMain.properties.getProperty("dbConnectionString"), "SA", "");
     		conn.createStatement().executeQuery(createTable);   					   			       
 		}catch (SQLException e) {
@@ -54,7 +53,7 @@ public class DbConnection {
 		LoadJDBCDriver();
 		
 		try {
-			logger.info("Attempting to connect to database and execute query.");
+			logger.info("Attempting to connect to database and execute insert query.");
 			conn = DriverManager.getConnection(AppMain.properties.getProperty("dbConnectionString"), "SA", "");		   			
 			String query = "INSERT INTO event (id, duration, Type, Host, alert) VALUES (?, ?, ?, ?, ?)";
 			PreparedStatement insertStmnt = conn.prepareStatement(query);    
@@ -84,15 +83,5 @@ public class DbConnection {
 			}
 		}
 
-	}
-	
-    public static String fileToString(File fileName){ 
-    	String string = "";
-    	try{   
-    		string = FileUtils.readFileToString(fileName, "utf-8");  		 		
-    	}catch (IOException e) {
-			logger.debug("Failed to read the file and convert content into string.", e);
-    	} 
-    	return string;    	
-    }    
+	}   
 }

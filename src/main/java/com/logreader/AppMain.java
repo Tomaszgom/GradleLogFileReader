@@ -72,7 +72,7 @@ public final class AppMain extends Application {
                     	JOptionPane.showMessageDialog(null, AppMessages.FileNotExist.getText(),"Error", JOptionPane.ERROR_MESSAGE);  				
                       	return;
                 	}
-                	
+                                  	
                 	// Start thread - reading the file               	
                     Thread threadFileRead = new Thread(new Runnable(){
                         @Override
@@ -87,14 +87,12 @@ public final class AppMain extends Application {
                     Thread threadCreateEventTable = new Thread(new Runnable(){
                         @Override
                         public void run() { 
-                        	logger.info("Thread threadCreateEventTable has been initialized.");                      	
-                        	ClassLoader classLoader = getClass().getClassLoader();                       	
-                        	dbConnection.CreateEventTable(new File(classLoader.getResource("sql/createEventTable.sql").getFile()));
+                        	logger.info("Thread threadCreateEventTable has been initialized.");         
+                            dbConnection.CreateEventTable();
                         }
                     });             
                     threadCreateEventTable.start();
-                    
-               
+                                  
               		// Current thread will wait for file to be read before starting to read from map and inserting to db                   
             		try {
             			threadFileRead.join();   				
@@ -117,8 +115,7 @@ public final class AppMain extends Application {
                 	logger.info("Data has been successfully loaded.");	                             	
                   	Alert alert = new Alert(AlertType.INFORMATION, "Data has been successfully loaded.", ButtonType.OK);
                   	alert.showAndWait();
-                  	System.exit(0);
-                	
+                  	System.exit(0);               	
                 }
             
             });

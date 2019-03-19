@@ -1,120 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.logreader.DbConnectionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-03-19T00:57:06" hostname="HP-ROKHVUNS84EC" time="0.088">
+<testsuite name="com.logreader.DbConnectionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-03-19T04:43:57" hostname="HP-ROKHVUNS84EC" time="1.61">
   <properties/>
-  <testcase name="testLoadJDBCDriver" classname="com.logreader.DbConnectionTest" time="0.004"/>
-  <testcase name="testInsertData" classname="com.logreader.DbConnectionTest" time="0.083"/>
-  <system-out><![CDATA[2019-03-19 01:57:05 [Test worker] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
-2019-03-19 01:57:05 [Test worker] DEBUG DbConnection:94 - Failed to read the file and convert content into string.
-java.io.FileNotFoundException: File '\.src\test\resources\sql\createEventTable.sql' does not exist
-	at org.apache.commons.io.FileUtils.openInputStream(FileUtils.java:292)
-	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1765)
-	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1784)
-	at com.logreader.DbConnection.fileToString(DbConnection.java:92)
-	at com.logreader.DbConnection.CreateEventTable(DbConnection.java:34)
-	at com.logreader.DbConnectionTest.CreateExpectedEventsMap(DbConnectionTest.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-2019-03-19 01:57:05 [Test worker] INFO  DbConnection:38 - Attempting to connect to database and execute query.
-2019-03-19 01:57:06 [Test worker] INFO  ENGINE:? - checkpointClose start
-2019-03-19 01:57:06 [Test worker] INFO  ENGINE:? - checkpointClose synched
-2019-03-19 01:57:06 [Test worker] INFO  ENGINE:? - checkpointClose script done
-2019-03-19 01:57:06 [Test worker] INFO  ENGINE:? - checkpointClose end
-2019-03-19 01:57:06 [Test worker] DEBUG DbConnection:42 - SQL Exception failed.
-java.sql.SQLSyntaxErrorException: unexpected end of statement
-	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
-	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
-	at org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
-	at org.hsqldb.jdbc.JDBCStatement.executeQuery(Unknown Source)
-	at com.logreader.DbConnection.CreateEventTable(DbConnection.java:40)
-	at com.logreader.DbConnectionTest.CreateExpectedEventsMap(DbConnectionTest.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.hsqldb.HsqlException: unexpected end of statement
-	at org.hsqldb.error.Error.parseError(Unknown Source)
-	at org.hsqldb.ParserBase.unexpectedToken(Unknown Source)
-	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
-	at org.hsqldb.ParserCommand.compileStatements(Unknown Source)
-	at org.hsqldb.Session.executeDirectStatement(Unknown Source)
-	at org.hsqldb.Session.execute(Unknown Source)
-	... 43 more
-2019-03-19 01:57:06 [Time-limited test] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
-2019-03-19 01:57:06 [Test worker] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
-2019-03-19 01:57:06 [Test worker] INFO  DbConnection:57 - Attempting to connect to database and execute query.
-2019-03-19 01:57:06 [Test worker] INFO  DbConnection:22 - Attempting to load HSQLDB JDBC driver.
+  <testcase name="testLoadJDBCDriver" classname="com.logreader.DbConnectionTest" time="0.042"/>
+  <testcase name="testInsertData" classname="com.logreader.DbConnectionTest" time="1.566"/>
+  <system-out><![CDATA[2019-03-19 05:43:57 [Time-limited test] INFO  DbConnection:19 - Attempting to load HSQLDB JDBC driver.
+2019-03-19 05:43:58 [Test worker] INFO  DbConnection:19 - Attempting to load HSQLDB JDBC driver.
+2019-03-19 05:43:58 [Test worker] INFO  DbConnection:56 - Attempting to connect to database and execute insert query.
+2019-03-19 05:43:59 [Test worker] INFO  ENGINE:? - checkpointClose start
+2019-03-19 05:43:59 [Test worker] INFO  ENGINE:? - checkpointClose synched
+2019-03-19 05:43:59 [Test worker] INFO  ENGINE:? - checkpointClose script done
+2019-03-19 05:43:59 [Test worker] INFO  ENGINE:? - checkpointClose end
+2019-03-19 05:43:59 [Test worker] INFO  DbConnection:19 - Attempting to load HSQLDB JDBC driver.
+2019-03-19 05:43:59 [Test worker] INFO  DbConnection:19 - Attempting to load HSQLDB JDBC driver.
+2019-03-19 05:43:59 [Test worker] INFO  DbConnection:37 - Attempting to connect to database and execute create table query.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

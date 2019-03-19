@@ -33,7 +33,7 @@ public class LogFileRead {
         				new BufferedReader(
         						new FileReader(file)))){ 
         	
-			logger.info("Attempting to open the file.");
+			logger.info("Opening the input file and reading lines.");
         	
 			while(scanner.hasNextLine()) {
      			String line = scanner.nextLine();	

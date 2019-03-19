@@ -13,7 +13,6 @@ repositories {
 dependencies {
 	implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
-	implementation group: 'commons-io', name: 'commons-io', version: '2.5'
 	implementation group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'	
 	implementation group: 'log4j', name: 'log4j', version: '1.2.17'
 	implementation group: 'log4j', name: 'apache-log4j-extras', version: '1.2.17'
