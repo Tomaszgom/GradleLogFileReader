@@ -1,6 +1,5 @@
 package com.logreader;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -21,13 +20,14 @@ public class RunDBGUI {
 					"--url", properties.getProperty("dbConnectionString"), "--noexit"});
 	}
 
-	/* Load Application properties */   	
-
-    public static void LoadAppProperties(){  	
-    	try(InputStream inputProperties = new FileInputStream("./src/main/resources/application.properties")){   
+	
+    // Load Application properties   
+    public static void LoadAppProperties(){    	
+    	ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    	try(InputStream inputProperties = classloader.getResourceAsStream("application.properties")){    		
     		properties.load(inputProperties);  		
     	}catch (IOException e) {
-    		e.printStackTrace();
+       		e.printStackTrace();
     	}  	
     }
 	

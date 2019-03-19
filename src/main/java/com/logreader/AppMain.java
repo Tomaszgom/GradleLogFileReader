@@ -1,7 +1,6 @@
 package com.logreader;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -88,8 +87,9 @@ public final class AppMain extends Application {
                     Thread threadCreateEventTable = new Thread(new Runnable(){
                         @Override
                         public void run() { 
-                        	logger.info("Thread threadCreateEventTable has been initialized.");
-                        	dbConnection.CreateEventTable(new File("./src/main/resources/sql/createEventTable.sql"));
+                        	logger.info("Thread threadCreateEventTable has been initialized.");                      	
+                        	ClassLoader classLoader = getClass().getClassLoader();                       	
+                        	dbConnection.CreateEventTable(new File(classLoader.getResource("sql/createEventTable.sql").getFile()));
                         }
                     });             
                     threadCreateEventTable.start();
@@ -158,8 +158,9 @@ public final class AppMain extends Application {
     }
     
     // Load Application properties   
-    public static void LoadAppProperties(){
-    	try(InputStream inputProperties = new FileInputStream("./src/main/resources/application.properties")){   
+    public static void LoadAppProperties(){    	
+    	ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    	try(InputStream inputProperties = classloader.getResourceAsStream("application.properties")){    		
     		properties.load(inputProperties);  		
     	}catch (IOException e) {
     		logger.debug("Application properties could not be loaded.",e);

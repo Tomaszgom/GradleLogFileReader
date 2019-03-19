@@ -2,7 +2,7 @@ package com.logreader;
 
 public enum AppMessages {
 	
-	/* Enumerator storing Application messages codes and messages */
+	/*** Enumerator storing Application messages codes and messages ***/
 	
 	UnidentifiedError(0, "Unidentified error."),
 	

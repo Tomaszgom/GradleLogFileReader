@@ -2,6 +2,7 @@ package com.logreader;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -29,7 +30,9 @@ public class DbConnectionTest {
 	}
 		
 	@BeforeClass
-	public static void CreateExpectedEventsMap() {	
+	public static void CreateExpectedEventsMap() {
+		dbConnection.CreateEventTable(new File("/.src/test/resources/sql/createEventTable.sql"));
+		
 		eetrySt.setId(testRecId);
 		eetryFsh.setId(testRecId);
 		event.setId(testRecId);
@@ -49,7 +52,6 @@ public class DbConnectionTest {
 	@Test(timeout=20000)
 	public void testLoadJDBCDriver() {
 		dbConnection.LoadJDBCDriver();
-		assertEquals("testId0001,5,APPLICATION_LOG,12345,true",readFromDB());
 	}
 	
 	@Test
@@ -73,17 +75,18 @@ public class DbConnectionTest {
 			prepStmnt.clearParameters();
 	        ResultSet resSet = prepStmnt.executeQuery();
 	        	 	        
-	        String recStr;
+	        String recStr = "";
 	        while(resSet.next()){
 	        	recStr = resSet.getString(1)+","+resSet.getLong(2)+","+resSet.getString(3)+","+ 
 	        			resSet.getString(4)+","+resSet.getBoolean(5);
-	        	return recStr;     	
-	        }	        
-	        
-	        // Remove test record        
-			prepStmnt = conn.prepareStatement("delete from event where ID='" + testRecId+"'");
-			prepStmnt.clearParameters();
-	        prepStmnt.executeUpdate();
+	        	
+	        	// Remove test record        
+	        	prepStmnt = conn.prepareStatement("delete from event where ID='" + testRecId+"'");
+	        	prepStmnt.clearParameters();
+	        	prepStmnt.executeUpdate();
+	        	
+	        	return recStr;     	// return first record string
+	        }	        	        
 	        
 		}catch (SQLException e) {
 			e.printStackTrace();
@@ -94,7 +97,7 @@ public class DbConnectionTest {
 				e.printStackTrace();
 			}
 		}
-		return null;
+		return "";
 	}
 	
 
