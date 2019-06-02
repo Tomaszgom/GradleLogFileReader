@@ -26,6 +26,14 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Application is a tool which allows to read Server Events from log files in defined format, 
+ * create table and insert data to HSQL Database, storing records in local file.
+ *
+ */
+
  
 public final class AppMain extends Application {
 

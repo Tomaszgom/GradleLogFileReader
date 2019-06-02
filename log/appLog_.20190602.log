@@ -1,0 +1,4 @@
+2019-06-02 19:16:13,176 [main] INFO  (AppMain.java:41) - Launching application.
+ 2019-06-02 19:16:13,251 [JavaFX Application Thread] INFO  (AppMain.java:49) - Loading GUI.
+ 2019-06-02 19:16:54,952 [JavaFX Application Thread] INFO  (AppMain.java:129) - Application closed.
+ 
