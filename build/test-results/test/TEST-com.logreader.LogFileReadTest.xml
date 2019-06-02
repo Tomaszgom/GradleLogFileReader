@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.logreader.LogFileReadTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-03-19T04:44:00" hostname="HP-ROKHVUNS84EC" time="0.024">
+<testsuite name="com.logreader.LogFileReadTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-06-02T17:36:36" hostname="HP-ROKHVUNS84EC" time="0.031">
   <properties/>
-  <testcase name="testRead_EventMapSize" classname="com.logreader.LogFileReadTest" time="0.01"/>
-  <testcase name="testRead_EventMapValuesEqual" classname="com.logreader.LogFileReadTest" time="0.002"/>
-  <testcase name="testRead_EventMapHasEntry" classname="com.logreader.LogFileReadTest" time="0.009"/>
-  <system-out><![CDATA[2019-03-19 05:44:00 [Test worker] INFO  LogFileRead:36 - Opening the input file and reading lines.
+  <testcase name="testRead_EventMapSize" classname="com.logreader.LogFileReadTest" time="0.013"/>
+  <testcase name="testRead_EventMapValuesEqual" classname="com.logreader.LogFileReadTest" time="0.001"/>
+  <testcase name="testRead_EventMapHasEntry" classname="com.logreader.LogFileReadTest" time="0.01"/>
+  <system-out><![CDATA[2019-06-02 19:36:35 [Test worker] INFO  LogFileRead:36 - Opening the input file and reading lines.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
